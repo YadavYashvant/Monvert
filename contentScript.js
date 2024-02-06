@@ -5,3 +5,12 @@ document.addEventListener('selectionchange', function () {
     }
   });
   
+  document.body.addEventListener('input', function(event) {
+    const text = event.target.value.toLowerCase();
+    if (text.includes('inr') || text.includes('dollar')) {
+      const modifiedText = text.replace('inr', 'convert INR into dollar')
+                               .replace('dollar', 'convert dollar into INR');
+      event.target.value = modifiedText;
+    }
+  });
+  

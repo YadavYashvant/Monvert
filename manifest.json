@@ -10,6 +10,10 @@
         "js": ["contentScript.js"]
       }
     ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
     "icons": {
       "48": "icon.png"
     },
