@@ -4,7 +4,8 @@ document.addEventListener('selectionchange', function () {
       browser.runtime.sendMessage({ selection: parseFloat(selection) });
     }
   });
-  
+
+  // for detecting 'inr' or 'dollar' in the input field and replacing them
   document.body.addEventListener('input', function(event) {
     const text = event.target.value.toLowerCase();
     if (text.includes('inr') || text.includes('dollar')) {
